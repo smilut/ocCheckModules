@@ -1,0 +1,47 @@
+{
+	"description": ["Пути в конфиг пишутся как есть, не зависимо от наличия в них пробелов. ",
+		"В параметрах логирования если для 'rotate_time' указано 'midnight', то интервал игнорируется",
+		"для остальных типов ротации логов см. документацию python модуль logging",
+		"обработчик файлов логирования TimedRotatingFileHandler"
+		],
+	"onec": {
+		"start_path": "C:\\Program Files\\1cv8\\8.3.20.1838\\bin\\1cv8.exe",
+		"result_dump_path": ".\\tests\\test data\\result.txt",
+		"log_file_path": ".\\tests\\test data\\out.txt",
+		"timeout": 100,
+		"update_timeout": 4800,
+		"dump_timeout": 10800
+	},
+	"storage": {
+		"path": "C:\\projects\\StorageToGit\\tests\\storage\\BIT_FINANCE",
+		"user": "Милютинский",
+		"password": "",
+		"report_path": ".\\tests\\test data\\storage_report.mxl",
+		"json_report_path": ".\\tests\\test data\\storage_history.json"
+	},
+	"info_base": {
+		"connection_string": "File=\"C:\\Users\\milut\\Documents\\StorageReceiver\";",
+		"user": "Администратор",
+		"password": "",
+		"windows_auth": false
+	},
+	"git": {
+		"path": ".\\tests\\test data\\checks\\.git",
+		"check_res_path": ".\\tests\\test data\\checks",
+		"default_user_email": "defuser@mail.dev",
+		"push_timeout": 1200,
+		"email": "test@test.ru"
+	},
+	"logging": {
+		"level": "DEBUG",
+		"path": ".\\tests\\test data\\log.txt",
+		"rotate_time": "midnight",
+		"rotate_interval": 1,
+		"copy_count": 5
+	},
+	"check": {
+		"flags": "-ConfigLogIntegrity -IncorrectReferences -ThinClient -WebClient -Server -ExternalConnection -ThickClientManagedApplication -UnreferenceProcedures -HandlersExistence -EmptyHandlers -ExtendedModulesCheck -CheckUseModality -CheckUseSynchronousCalls",
+		"timeout": 25200,
+		"result_file_name": "conf_err.txt"
+	}
+}
