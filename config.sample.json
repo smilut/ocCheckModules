@@ -23,7 +23,8 @@
 		"connection_string": "File=\"C:\\Users\\milut\\Documents\\StorageReceiver\";",
 		"user": "Администратор",
 		"password": "",
-		"windows_auth": false
+		"windows_auth": false,
+		"empty_db_path": "checkCfgEmpty.dt"
 	},
 	"git": {
 		"path": ".\\tests\\test data\\checks\\.git",

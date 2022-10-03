@@ -110,7 +110,8 @@ def restore_bd_configuration(conf):
     global logger
 
     command_line = get_onec_command_line(conf, 'DESIGNER')
-    restore_params = ' /RollbackCfg'
+    # restore_params = ' /RollbackCfg'
+    restore_params = ' /RestoreIB "{}"'.format(conf['info_base']['empty_db_path'])
 
     oc_command = OCcommand()
     oc_command.command_line = command_line + restore_params
