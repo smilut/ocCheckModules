@@ -302,15 +302,13 @@ def check_configuration(conf: dict):
 def git_commit_check_storage_version(conf: dict):
     global logger
 
-    logger.info('Начало git commit')
-
-    logger.info('git commit - завершен')
     logger.info('Начало git add')
     git_options = conf['git']
     repo = git.Repo(git_options['path'], search_parent_directories=False)
     repo.index.add('*')
     logger.info('Завершен git add;')
 
+    logger.info('Начало git commit')
     git_author = '{author} <{mail}>'.format(author=os.getlogin(), mail=git_options['email'])
     label = datetime.now().strftime("%d.%m.%Y %H:%M:%S")
 
@@ -343,8 +341,8 @@ def check_last_storage_ver():
     start_logger(conf)
     try:
         logger.info('Запуск скрипта')
-        # restore_bd_configuration(conf)
-        # update_to_storage_version(conf)
+        restore_bd_configuration(conf)
+        update_to_storage_version(conf)
         check_configuration(conf)
         git_commit_check_storage_version(conf)
         git_push(conf)
